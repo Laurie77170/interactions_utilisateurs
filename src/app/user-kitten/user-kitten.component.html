@@ -1,1 +1,8 @@
-<div *ngFor="let element of arrayUser">{{ element.name }}</div>
+<div *ngFor="let element of arrayUser">   
+        <ul>
+            <li>{{ element.name }}</li>
+            <li>{{ element.birthday }}</li>
+            <li>{{ element.race }}</li>
+            <img src="{{ element.picture }}"/>
+        </ul>
+    </div>

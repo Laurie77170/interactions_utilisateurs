@@ -1,37 +1,37 @@
 <form #myForm="ngForm" (ngSubmit)="myForm.valid && onSubmit()">
-    <!--Au moment de l'envoi du formulaire, vérification des erreurs-->
+    <!-- Au moment de l'envoi du formulaire, vérification des erreurs -->
     
-<fieldset> <!-- balise encadrement de label pour les formulaires -->
+<fieldset> <!--balise encadrement de label pour les formulaires-->
 <label for="name">Name of kitten</label>
-<input id="name" name="name" required type="text" #name="ngModel" [(ngModel)]="name"> <!-- stocker la valeur de la class -->
+<input id="name" name="name" required type="text" #firstName="ngModel" [(ngModel)]="name"> <!-- stocker la valeur de la class -->
 </fieldset>
 
 <div *ngIf="myForm.submitted">
-    <div *ngIf="name.errors">
-        <span *ngIf="name.errors?.['required']">You cannot add a kitten</span>
+    <div *ngIf="firstName.errors">
+        <span *ngIf="firstName.errors?.['required']">You cannot add a kitten</span>
     </div>
 </div>
 
 <fieldset>
 <label for="race">Race</label>
-<input id="race" name="race" required #race="ngModel" [(ngModel)]="race">
+<input id="race" name="race" required #catRace="ngModel" [(ngModel)]="race">
 </fieldset>
 
 <div *ngIf="myForm.submitted">
-    <div *ngIf="race.errors">
-        <span *ngIf="race.errors?.['required']">You cannot add a kitten</span>
+    <div *ngIf="catRace.errors">
+        <span *ngIf="catRace.errors?.['required']">You cannot add a kitten</span>
     </div>
 </div>
 
 <fieldset>
 <label for="birthday">Birthday</label>
-<input type="date" name="birthday" required #birthday="ngModel" [(ngModel)]="birthday">
+<input type="date" name="birthday" required #bDay="ngModel" [(ngModel)]="birthday">
 </fieldset>
 
 
 <div *ngIf="myForm.submitted">
-    <div *ngIf="birthday.errors">
-        <span *ngIf="birthday.errors?.['required']">You cannot add a kitten</span>
+    <div *ngIf="bDay.errors">
+        <span *ngIf="bDay.errors?.['required']">You cannot add a kitten</span>
     </div>
 </div>
 

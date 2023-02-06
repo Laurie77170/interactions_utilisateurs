@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Kitten } from './kitten';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,19 +9,21 @@ import { Kitten } from './kitten';
 })
 export class AppComponent {
   title = 'inter';
+  myForm: FormGroup | undefined;
+  
   kittens: Kitten [] = [
    {name: 'Princess',
     birthday: new Date(),
     race: 'sphinx',
-    photo: 'https://placekitten.com/200/300'},
+    picture: 'assets/chats_sphinx.jpg'},
     {name: 'Flocon',
     birthday: new Date(),
     race:'Main Coon',
-    photo: 'https://placekitten.com/200/310'},
+    picture: 'assets/main_coon.jpg'},
     {name: 'Minouche',
     birthday: new Date(),
     race: 'Persan',
-    photo: 'https://placekitten.com/200/320'},
+    picture: 'assets/persan.jpg'},
  ];
 
   userKittens: Kitten [] = [];

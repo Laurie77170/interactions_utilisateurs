@@ -1,9 +1,12 @@
+<div class="container">
 <div *ngFor = "let element of arrayKitten; let index = index">
-    <ul>
-        <li>{{ element.name }}</li>
-        <li>{{ element.birthday }}</li>
-        <li>{{ element.race }}</li>
-        <img {{ element.picture }}/>
-    </ul>
+    <img src="{{element.picture}}" (mouseover)="show=true" (mouseout)="show=false">
     <button type="submit" (click)="adopt(element, index)">Adopt</button>
+    <div *ngIf="show">
+        <ul>
+            <li>{{ element.name }}</li>
+            <li>{{ element.birthday }}</li>
+            <li>{{ element.race }}</li>
+        </ul>       
+    </div>
 </div>

@@ -4,7 +4,7 @@ export class Kitten {
         public name: string,
         public birthday: Date,
         public race: string,
-        public photo: string,
+        public picture: string,
         ) {}
 
 }

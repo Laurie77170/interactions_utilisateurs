@@ -1,0 +1,11 @@
+header, footer {
+    height: 20vh;
+    background-color: rgb(162, 235, 211);
+}
+
+main {
+    height: 60vh;
+    background-color: rgb(219, 202, 169);
+    display: flex;
+    flex-direction: row;
+}

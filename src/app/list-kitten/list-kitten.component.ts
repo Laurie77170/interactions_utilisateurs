@@ -9,13 +9,18 @@ import { Kitten } from '../kitten';
 })
 export class ListKittenComponent {
 
+  show: boolean;
+  constructor(){
+    this.show = false;
+  }
+ 
   @Input() arrayKitten: Kitten [] | undefined;
   @Input() arrayUser: Kitten[] | undefined;
 
   adopt(kitten:Kitten, index:number) {
     this.arrayUser?.push(kitten);
     this.arrayKitten?.splice(index,1);
-    // si le chat du tableau son nom est différent, il va revenir de
+  
     }
   }
 
